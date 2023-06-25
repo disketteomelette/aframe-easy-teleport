@@ -5,7 +5,7 @@ Live demo: https://maddening-luxuriant-hair.glitch.me/
 
 # schema
 
-The purpose of this straightforward plugin is to provide an extremely simple way to move objects or the user to a specific position within the scene without any unnecessary frills and with minimal code.
+The purpose of this component is to provide an extremely simple way to move objects or the user to a specific position within the scene without any unnecessary frills and with minimal code.
 
 This component needs from you the *what* and *where*. Simple. Use "where" to specify a 3 vector position and "target" to define what will move to the position.
 
