@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="aframe-easy-teleport.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-entity id="camara" camera look-controls position="0 1.6 0">
+      <a-cursor></a-cursor>
+    </a-entity> 
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+
+    <!-- Sample objects -->
+    <a-box position="-2 0.5 -5" scale="0.5 0.5 0.5" color="purple"></a-box>
+    <a-sphere id="esfera-movible" position="0 0.5 -5" radius="0.75" color="purple"></a-sphere>
+    <a-cylinder position="2 0.375 -5" scale="0.5 0.5 0.5" height="0.75" radius="0.25" color="purple"></a-cylinder>
+    <a-cone position="-2 0.75 -3" scale="0.5 0.5 0.5" height="1.5" radius-bottom="0.375" radius-top="0.125" color="purple"></a-cone>
+    <a-torus position="2 0.5 -3" scale="0.5 0.5 0.5" radius="0.5" radius-tubular="0.1" color="purple"></a-torus>
+    <a-dodecahedron position="0 0.5 -3" scale="0.5 0.5 0.5" radius="0.5" color="purple"></a-dodecahedron>
+    
+    <!-- Buttons calling easy-teleport component -->
+    <!-- Go to button position moving camera with id 'camara' -->
+    <a-box color="green" easy-teleport="where: 1 1.8 -2; target: #camara;" scale="0.2 0.2 0.1" position="1 1.8 -2"></a-box>
+    <!-- Go back to initial position moving camera with id 'camara'-->
+    <a-box color="red" easy-teleport="where: 0 1.6 0; target: #camara;" scale="0.2 0.2 0.1" position="-1 1.8 -2"></a-box>
+    <!-- Move up the sphere with id 'esfera-movible' -->
+    <a-box color="blue" easy-teleport="where: 0 3 -5; target: #esfera-movible;" scale="0.2 0.2 0.1" position="0 2.1 -2"></a-box>
+     
+  </a-scene>
+</body>
+</html>
